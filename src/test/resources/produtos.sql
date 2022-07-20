@@ -1,0 +1,5 @@
+INSERT INTO produto(codigo_barra, descricao, estoque, nome, data_atualizacao, data_cadastro) VALUES (7892840813010, 'Descricao 10', 10, 'Produto 10', NOW(), NOW());
+INSERT INTO produto(codigo_barra, descricao, estoque, nome, data_atualizacao, data_cadastro) VALUES (7892840813011, 'Descricao 11', 11, 'Produto 11', NOW(), NOW());
+INSERT INTO produto(codigo_barra, descricao, estoque, nome, data_atualizacao, data_cadastro) VALUES (7892840813012, 'Descricao 12', 12, 'Produto 12', NOW(), NOW());
+INSERT INTO produto(codigo_barra, descricao, estoque, nome, data_atualizacao, data_cadastro) VALUES (7892840813013, 'Descricao 13', 13, 'Produto 13', NOW(), NOW());
+INSERT INTO produto(codigo_barra, descricao, estoque, nome, data_atualizacao, data_cadastro) VALUES (7892840813014, 'Descricao 14', 14, 'Produto 14', NOW(), NOW());

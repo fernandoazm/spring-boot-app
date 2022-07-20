@@ -1,10 +1,17 @@
 package br.com.software.springbootapp.helpper;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+
+import com.google.gson.Gson;
 
 public class Utils {
 
@@ -53,4 +60,25 @@ public class Utils {
         reader.close();
         return fileData.toString();
     }
+    
+	public static <T extends Serializable> T cloneObject(T entity) {
+		if (entity == null) {
+			return null;
+		}
+		try {
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(entity);
+			ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+			ObjectInputStream ois = new ObjectInputStream(bais);
+			return (T) ois.readObject();
+		} catch (Exception e) {
+			return gsonClone(entity);
+		}
+	}    
+	
+	@SuppressWarnings("unchecked")
+	public static <T> T gsonClone(T entity) {
+		return (T) new Gson().fromJson(new Gson().toJson(entity), entity.getClass());
+	}
 }

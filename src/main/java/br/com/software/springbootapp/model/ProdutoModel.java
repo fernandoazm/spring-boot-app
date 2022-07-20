@@ -1,10 +1,7 @@
 package br.com.software.springbootapp.model;
 
 import br.com.software.springbootapp.domain.ProdutoEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -13,6 +10,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Getter
 @ToString
+@Builder
 public class ProdutoModel {
 
     private Long id;

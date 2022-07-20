@@ -5,10 +5,7 @@ import br.com.software.springbootapp.dto.PessoaDto;
 import br.com.software.springbootapp.enums.EnumSexo;
 import br.com.software.springbootapp.enums.EnumTipoPessoa;
 import br.com.software.springbootapp.helpper.DateUtil;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -17,6 +14,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Getter
 @ToString
+@Builder
 public class PessoalModel {
 
     private Long id;

@@ -7,7 +7,7 @@ import lombok.Getter;
 public enum EnumTipoPessoa implements PersistableEnum<String> {
 
     FISICA(1, "F", "Pessoa Física"),
-    JURIDICA(2, "J", "Pessoa Física");
+    JURIDICA(2, "J", "Pessoa Jurídica");
 
     private final Integer codigo;
     private final String sigla;
